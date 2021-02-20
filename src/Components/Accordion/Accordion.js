@@ -6,7 +6,7 @@ import {
     FaqsContainer,
 } from "./styles/styledAccordion";
 import data from "../../fixtures/faqsData.json";
-import { Faq } from '..';
+import { Faq, Optionform } from '..';
 
 const Accordion = () => {
     return (
@@ -23,6 +23,8 @@ const Accordion = () => {
                     ))}
                 </FaqsContainer>
             </Faqs>
+            {/* optionform */}
+            <Optionform />
         </Container>
     )
 };
