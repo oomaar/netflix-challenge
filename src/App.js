@@ -1,9 +1,10 @@
 import React from 'react';
-import { Accordion, Footer, Storycard } from './Components';
+import { Accordion, Footer, Header, Storycard } from './Components';
 
 function App() {
   return (
     <div>
+      <Header />
       <Storycard />
       <Accordion />
       <Footer />
