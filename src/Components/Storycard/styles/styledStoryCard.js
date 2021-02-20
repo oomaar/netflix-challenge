@@ -17,10 +17,19 @@ export const Card = styled.div`
         @media (max-width: 950px) {
             flex-direction: column;
         }
+
+        @media (max-width: 500px) {
+            /* iphone */
+        }
     }
 
     @media (max-width: 950px) {
         flex-direction: column;
+    }
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+        /* iphone */
     }
 `;
 

@@ -25,7 +25,7 @@ const Faq = ({ header, body }) => {
         <Container>
             <Item onClick={toggleAccordion}>
                 <Header>{header}</Header>
-                <Icon src="/images/icons/add.png" alt="add" />
+                <Icon className={`${setRotate}`} src="/images/icons/add.png" alt="add" />
             </Item>
             <Content ref={content} style={{ maxHeight: `${setHeight}` }}>
                 <Text dangerouslySetInnerHTML={{ __html: body }} />
