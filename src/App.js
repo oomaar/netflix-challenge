@@ -1,10 +1,11 @@
 import React from 'react';
-import { Footer, Storycard } from './Components';
+import { Accordion, Footer, Storycard } from './Components';
 
 function App() {
   return (
     <div>
       <Storycard />
+      <Accordion />
       <Footer />
     </div>
   );

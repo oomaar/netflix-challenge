@@ -1,0 +1,30 @@
+import React from 'react';
+import {
+    Container,
+    Title,
+    Faqs,
+    FaqsContainer,
+} from "./styles/styledAccordion";
+import data from "../../fixtures/faqsData.json";
+import { Faq } from '..';
+
+const Accordion = () => {
+    return (
+        <Container>
+            <Faqs>
+                <Title>Frequently Asked Questions</Title>
+                <FaqsContainer>
+                    {data.map(item => (
+                        <Faq 
+                            key = {item.id}
+                            header = {item.header}
+                            body= {item.body}
+                        />
+                    ))}
+                </FaqsContainer>
+            </Faqs>
+        </Container>
+    )
+};
+
+export default Accordion;
