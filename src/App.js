@@ -1,10 +1,11 @@
 import React from 'react';
-import Storycard from './Components/Storycard';
+import { Footer, Storycard } from './Components';
 
 function App() {
   return (
     <div>
       <Storycard />
+      <Footer />
     </div>
   );
 }

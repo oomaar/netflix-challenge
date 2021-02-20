@@ -60,6 +60,14 @@ export const ContainerImage = styled.div`
 
     &.flip__image {
         margin: auto 0 auto auto;
+
+        @media (max-width: 950px) {
+            margin: auto;
+        }
+    }
+
+    @media (max-width: 950px) {
+        margin: auto;
     }
 `;
 
