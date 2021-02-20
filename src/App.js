@@ -1,13 +1,10 @@
 import React from 'react';
-import { Accordion, Footer, Header, Storycard } from './Components';
+import HomeScreen from './Screens/HomeScreen';
 
 function App() {
   return (
     <div>
-      <Header />
-      <Storycard />
-      <Accordion />
-      <Footer />
+      <HomeScreen />
     </div>
   );
 }
