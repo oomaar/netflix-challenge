@@ -8,7 +8,7 @@ export const Container = styled.div`
 export const Background = styled.div`
     background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.35),
     rgba(0, 0, 0, 0.8)),
     url("/images/misc/home-bg.jpg") center center / cover no-repeat;

@@ -33,7 +33,6 @@ import {
     Button,
     Chevron,
 } from "./styles/styledOptionform";
-import "./styles/styledOptionform.css";
 
 const Optionfrom = () => {
 

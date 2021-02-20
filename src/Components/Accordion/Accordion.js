@@ -23,7 +23,6 @@ const Accordion = () => {
                     ))}
                 </FaqsContainer>
             </Faqs>
-            {/* optionform */}
             <Optionform />
         </Container>
     )

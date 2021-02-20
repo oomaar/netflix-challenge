@@ -28,7 +28,7 @@ const Faq = ({ header, body }) => {
                 <Icon className={`${setRotate}`} src="/images/icons/add.png" alt="add" />
             </Item>
             <Content ref={content} style={{ maxHeight: `${setHeight}` }}>
-                <Text dangerouslySetInnerHTML={{ __html: body }} />
+                <Text>{body}</Text>
             </Content>
         </Container>
     )
