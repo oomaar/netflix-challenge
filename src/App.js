@@ -1,9 +1,10 @@
 import React from 'react';
+import Storycard from './Components/Storycard';
 
 function App() {
   return (
-    <div className="App">
-      <h1>initial state</h1>
+    <div>
+      <Storycard />
     </div>
   );
 }
