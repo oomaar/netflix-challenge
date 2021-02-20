@@ -24,3 +24,7 @@ yarn-error.log*
 
 # don't need you
 Notes
+lib
+
+# i will get you soon
+seed.js
