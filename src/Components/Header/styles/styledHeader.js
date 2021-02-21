@@ -16,6 +16,17 @@ export const Background = styled.div`
     width: 100%;
     border-bottom: 8px solid #222;
     z-index: 1;
+
+    &.signin__background {
+        border: none;
+        height: 100vh;
+        background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.5)),
+        url("/images/misc/home-bg.jpg") center center / cover no-repeat;
+    }
 `;
 
 export const Netflix = styled.img`

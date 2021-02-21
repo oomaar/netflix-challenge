@@ -1,26 +1,6 @@
-// {/* <div className="optionForm">
-// <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-// <div className="optionForm__input">
-//     <form className="optionForm__inputForm">
-//         <div className="optionForm__inputContainer">
-//             <input
-//                 className="optionForm__inputInput"
-//                 type="email"
-//             />
-//             <label className="optionForm__input__label">
-//                 <span className="optionForm__label__span">Email address</span>
-//             </label>
-//         </div>
-        
-//         <button onClick={signupStatus} className="optionForm__getStarted">
-//             Get Started
-//             <img src="/images/icons/chevron-right.png" alt="" />
-//         </button>
-//     </form>
-// </div>
-// </div> */}
-
 import React from 'react';
+import { Link } from 'react-router-dom';
+import * as ROUTES from "../../constants/routes";
 import {
     Container,
     Title,
@@ -53,10 +33,12 @@ const Optionfrom = () => {
                             <Span>Email address</Span>
                         </Lable>
                     </InputContainer>
-                    
-                    <Button type="submit" onClick={getStarted}>
-                        Get Started
+
+                    <Button onClick={getStarted}>
+                        <Link to={ROUTES.SIGNUP} style={{ textDecoration: "none", color: "#fff" }}>
+                            Get Started
                         <Chevron src="/images/icons/chevron-right.png" alt="right" />
+                        </Link>
                     </Button>
                 </Form>
             </Subcontainer>
