@@ -22,9 +22,9 @@ export const Background = styled.div`
         height: 100vh;
         background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.5)),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.35)),
         url("/images/misc/home-bg.jpg") center center / cover no-repeat;
     }
 `;

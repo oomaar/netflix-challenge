@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding: 20px;
 
     &.sigin__footer {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
         max-width: 100%;
         position: absolute;
         bottom: 0;

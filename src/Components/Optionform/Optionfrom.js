@@ -8,7 +8,7 @@ import {
     Form,
     InputContainer,
     Input,
-    Lable,
+    Label,
     Span,
     Button,
     Chevron,
@@ -29,9 +29,9 @@ const Optionfrom = () => {
                             type="text"
                             required
                         />
-                        <Lable>
+                        <Label>
                             <Span>Email address</Span>
-                        </Lable>
+                        </Label>
                     </InputContainer>
 
                     <Button onClick={getStarted}>

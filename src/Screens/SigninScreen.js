@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components/macro";
 import logo from "../logo.svg";
 import {
-    Container,
+    Container as HeaderContainer,
     Background,
     Netflix,
 } from "../Components/Header/styles/styledHeader";
@@ -13,16 +13,17 @@ import {
     Row,
     Link,
 } from "../Components/Footer/styles/styledFooter";
+import { Form } from '../Components';
 
 const SigninScreen = () => {
     return (
         <ScreenContainer>
-            <Container>
+            <HeaderContainer>
                 <Background className="signin__background">
                     <Netflix src={logo} alt="Netflix" />
+                    <Form />
                 </Background>
-            </Container>
-
+            </HeaderContainer>
             <FooterContainer className="sigin__footer">
                 <Temp>
                     <Title>Questions? Contact us</Title>

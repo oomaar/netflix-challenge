@@ -27,6 +27,12 @@ export const Form = styled.form`
     justify-content: center;
     padding: 10px;
 
+    &.signin__form {
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+
     @media (max-width: 950px) {
         display: flex;
         flex-direction: column;
@@ -38,11 +44,15 @@ export const InputContainer = styled.div`
     position: relative;
     max-width: 600px;
     width: 100%;
-    border: 1px solid green;
+
+    &.signin__inputContainer {
+        height: 50px;
+        margin: 0 auto 30px;
+    }
 `;
 
 
-export const Lable = styled.label`
+export const Label = styled.label`
     color: #000;
     pointer-events: none;
     position: absolute;
@@ -67,13 +77,17 @@ export const Input = styled.input`
     border: 0;
     font-size: 18px;
 
-    &:focus + ${Lable} ${Span} {
+    &.signin__input {
+        border-radius: 3px;
+    }
+
+    &:focus + ${Label} ${Span} {
         transform: translateY(-100%);
         font-size: 12px;
         left: 1%;
     }
 
-    &:valid + ${Lable} ${Span} {
+    &:valid + ${Label} ${Span} {
         transform: translateY(-100%);
         font-size: 12px;
         left: 1%;
