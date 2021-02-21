@@ -1,9 +1,12 @@
 import React from 'react';
 import { useContent } from "../hooks";
+import selectionFilter  from "../utils/selectionFilter";
 
 const BrowseScreen = () => {
     const { series } = useContent('series');
-    const { films } = useContent('films');
+    const { films } = useContent('films')
+    const slides = selectionFilter(series, films);
+    console.log("🚀 ~ file: BrowseScreen.js ~ line 9 ~ BrowseScreen ~ slides", slides)
     
     return (
         <div>
