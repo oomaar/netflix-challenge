@@ -19,7 +19,7 @@ export const Background = styled.div`
 
     &.signin__background {
         border: none;
-        height: 100vh;
+        height: 100%;
         background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.35),

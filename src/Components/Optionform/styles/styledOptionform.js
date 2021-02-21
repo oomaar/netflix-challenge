@@ -29,7 +29,7 @@ export const Form = styled.form`
 
     &.signin__form {
         flex-direction: column;
-        width: 70%;
+        width: 80%;
         margin: auto;
     }
 

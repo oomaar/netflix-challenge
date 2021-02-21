@@ -4,4 +4,5 @@ export { default as Accordion } from "./Accordion/Accordion";
 export { default as Faq } from "./Faq/Faq";
 export { default as Optionform } from "./Optionform/Optionfrom";
 export { default as Header } from "./Header/Header";
-export { default as Form } from "./Form/Form";
+export { default as SigninForm } from "./SigninForm/SigninForm";
+export { default as SignupForm } from "./SignupForm/SignupForm";

@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Container = styled.div`
-        max-width: 500px;
-        max-height: 550px;
+        max-width: 450px;
+        max-height: 650px;
         padding: 10px;
         height: 100%;
         position: absolute;
@@ -15,7 +15,7 @@ export const Container = styled.div`
 
         @media (max-width: 600px) {
             top: 50px;
-            height: 60%;
+            height: 70%;
         }
 `;
 
@@ -32,7 +32,11 @@ export const Title = styled.h1`
     color: #fff;
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 28px;
+    margin: 30px 0 28px;
+
+        @media (max-width: 600px) {
+            margin: 25px 0 28px;
+        }
 `;
 
 export const Submit = styled.button`

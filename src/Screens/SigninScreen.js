@@ -13,7 +13,7 @@ import {
     Row,
     Link,
 } from "../Components/Footer/styles/styledFooter";
-import { Form } from '../Components';
+import { SigninForm } from '../Components';
 
 const SigninScreen = () => {
     return (
@@ -21,7 +21,7 @@ const SigninScreen = () => {
             <HeaderContainer>
                 <Background className="signin__background">
                     <Netflix src={logo} alt="Netflix" />
-                    <Form />
+                    <SigninForm />
                 </Background>
             </HeaderContainer>
             <FooterContainer className="sigin__footer">
@@ -51,7 +51,10 @@ const SigninScreen = () => {
 
 export default SigninScreen;
 
-const ScreenContainer = styled.div``;
+const ScreenContainer = styled.div`
+    position: relative;
+    height: 115vh;
+`;
 
 const Temp = styled.div`
     max-width: 1100px;
