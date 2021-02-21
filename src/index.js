@@ -4,7 +4,7 @@ import App from './App';
 import store from './app/store';
 import { Provider } from 'react-redux';
 import { GlobalStyles } from './GlobalStyles';
-import { firebase } from './lib/firebase';
+// import { firebase } from './lib/firebase';
 
 render(
   <React.StrictMode>

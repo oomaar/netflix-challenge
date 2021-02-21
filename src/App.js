@@ -1,26 +1,45 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { HomeScreen, SigninScreen, SignupScreen, BrowseScreen } from './Screens';
+import { IsUserRedirect, ProtectedRoute } from "./helpers/routes";
 import * as ROUTES from "./constants/routes";
-import HomeScreen from './Screens/HomeScreen';
-import SigninScreen from "./Screens/SigninScreen";
-import SignupScreen from "./Screens/SignupScreen";
-import BrowseScreen from "./Screens/BrowseScreen";
+import { useAuthListener } from "./hooks";
 
 function App() {
+  // const user = {};
+  // const user = null;
+  // const user = { name: 'username' };
+  const { user } = useAuthListener();
+  console.log("🚀 ~ file: App.js ~ line 13 ~ App ~ user", user);
+
   return (
     <Router>
-      <Route exact path={ROUTES.HOME}>
-        <HomeScreen />
-      </Route>
-      <Route exact path={ROUTES.SIGNIN}>
-        <SigninScreen />
-      </Route>
-      <Route exact path={ROUTES.SIGNUP}>
-        <SignupScreen />
-      </Route>
-      <Route exact path={ROUTES.BROWSE}>
-        <BrowseScreen />
-      </Route>
+      <Switch>
+        <IsUserRedirect
+          user={user}
+          loggedinpath={ROUTES.BROWSE}
+          exact
+          path={ROUTES.HOME}>
+          <HomeScreen />
+        </IsUserRedirect>
+        <IsUserRedirect
+          user={user}
+          loggedinpath={ROUTES.BROWSE}
+          exact
+          path={ROUTES.SIGNIN}>
+          <SigninScreen />
+        </IsUserRedirect>
+        <IsUserRedirect
+          user={user}
+          loggedinpath={ROUTES.BROWSE}
+          exact
+          path={ROUTES.SIGNUP}>
+          <SignupScreen />
+        </IsUserRedirect>
+        <ProtectedRoute user={user} exact path={ROUTES.BROWSE}>
+          <BrowseScreen />
+        </ProtectedRoute>
+      </Switch>
     </Router>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useContent } from "../hooks";
 
 const BrowseScreen = () => {
     return (

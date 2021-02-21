@@ -21,7 +21,7 @@ import {
 } from '../SigninForm/styles/styledSigninForm';
 
 const SignupForm = () => {
-    const firstName = useRef(null);
+    const [firstName, setFirstName] = useState("");
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const [error, setError] = useState(""); 
@@ -34,7 +34,7 @@ const SignupForm = () => {
 
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
-            passwordRef.current.value
+            passwordRef.current.value,
         )
         .then(authUser => {
             // console.log("🚀 User", authUser);
@@ -48,6 +48,7 @@ const SignupForm = () => {
         })
         .catch(err => setError(err.message));
     }
+    
 
     return (
         <Container>
@@ -60,7 +61,8 @@ const SignupForm = () => {
                 {error && <Error>{error}</Error>}
                 <InputContainer className="signin__inputContainer">
                     <Input
-                        ref={firstName}
+                        value={firstName}
+                        onChange={({target}) => setFirstName(target.value)}
                         autoComplete="off"
                         className="signin__input"
                         name="name"
