@@ -13,6 +13,8 @@ export default function useContent (target) {
                 ...object.data(),
                 docId: object.id,
             }));
+
+            setContent(allContent);
         })
         .catch(err => console.log(err.message));
 
