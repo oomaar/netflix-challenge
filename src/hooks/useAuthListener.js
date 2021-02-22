@@ -25,6 +25,39 @@ export default function useAuthListener() {
 
 
 
+
+
+
+
+// import { useState, useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { login, logout, selectUser } from '../features/userSlice';
+// import { auth } from "../lib/firebase";
+
+// export default function useAuthListener() {
+//     // const [user, setUser] = useState(JSON.parse(localStorage.getItem('authUser')));
+//     const user = useSelector(selectUser);
+//     const dispatch = useDispatch();
+
+//     useEffect(() => {
+//         const listener = auth.onAuthStateChanged((authUser) => {
+//             if (authUser) {
+//                 localStorage.setItem('authUser', JSON.stringify(authUser));
+//                 // setUser(authUser);
+//                 dispatch(login({ value: authUser }));
+//             } else {
+//                 localStorage.removeItem('authUser');
+//                 // setUser(null);
+//                 dispatch(logout());
+//             }
+//         });
+
+//         return () => listener();
+//     }, []);
+
+//     return { user };
+// }
+
 // import { useEffect } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 // import { selectUserName } from "../features/usernameSlice";

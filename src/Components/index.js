@@ -6,3 +6,4 @@ export { default as Optionform } from "./Optionform/Optionfrom";
 export { default as Header } from "./Header/Header";
 export { default as SigninForm } from "./SigninForm/SigninForm";
 export { default as SignupForm } from "./SignupForm/SignupForm";
+export { default as BrowseContainer } from "./BrowseContainer/BrowseContainer";
