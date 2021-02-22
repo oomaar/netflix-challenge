@@ -18,6 +18,7 @@ export const FrontEnd = styled.div`
     width: 100%;
     position: absolute;
     top: 0;
+    overflow: hidden;
 `;
 
 export const Title = styled.h1`

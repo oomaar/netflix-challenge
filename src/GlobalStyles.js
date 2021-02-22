@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     html, body {
+        margin: 0;
         scroll-behavior: smooth;
         height: 100%;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
