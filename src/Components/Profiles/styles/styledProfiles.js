@@ -59,20 +59,29 @@ export const User = styled.div`
     align-items: center;
 `;
 
+export const Picture = styled.img`
+    cursor: pointer;
+    width: 100%;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    margin: auto;
+`;
+
+export const DisplayName = styled.h3`
+    color: #808080;
+    text-align: center;
+`;
+
 export const UserPicture = styled.div`
     padding: 10px;
     width: 200px;
     margin: 10px;
-    `;
-
-export const Picture = styled.img`
-    cursor: pointer;
-    border-radius: 5px;
-    width: 100%;
-`;
-
-export const UserDisplayName = styled.div``;
-
-export const DisplayName = styled.h3`
-    color: #808080;
+    
+    &:hover > ${Picture} {
+        border: 3px solid #fff;
+    }
+    
+    &:hover ${DisplayName} {
+        color: #fff;
+    }
 `;

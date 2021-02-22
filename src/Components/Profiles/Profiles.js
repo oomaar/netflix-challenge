@@ -33,10 +33,8 @@ const Profiles = ({ user, setProfile }) => {
                         photoURL: user.photoURL,
                     })}>
                         <Picture src={user.photoURL ? `/images/users/${user.photoURL}.png` : `/images/misc/loading.gif`} />
-                    </UserPicture>
-                    <UserDisplayName>
                         <DisplayName>{user.displayName}</DisplayName>
-                    </UserDisplayName>
+                    </UserPicture>
                 </User>
 
                 <ProfilesButton>Manage Profiles</ProfilesButton>
