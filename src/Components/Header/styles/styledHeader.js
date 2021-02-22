@@ -37,6 +37,10 @@ export const Netflix = styled.img`
     position: absolute;
     top: 20px;
     left: 20px;
+    
+    &.profiles__logo {
+        width: clamp(80px, 10vw, 120px);
+    }
 `;
 
 export const Sigin = styled.button`
