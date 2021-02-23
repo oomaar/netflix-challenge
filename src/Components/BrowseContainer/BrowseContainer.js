@@ -9,14 +9,14 @@ const BrowseContainer = () => {
     const user = auth.currentUser || {};
 
     useEffect(() => {
-        console.log("🚀 ~ file: BrowseContainer.js ~ line 7 ~ BrowseContainer ~ profile", profile)
+        // console.log("🚀 ~ file: BrowseContainer.js ~ line 7 ~ BrowseContainer ~ profile", profile)
         setTimeout(() => setLoading(false), 3000);
     }, [profile, profile.displayName]);
 
     return profile.displayName ? (
         loading ? (
             <Loading src={user.photoURL} />
-        ) : null
+        ) : <Loading.ReleaseBody />
     ) : (
             <Profiles user={user} setProfile={setProfile} />
         )

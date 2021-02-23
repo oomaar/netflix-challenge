@@ -63,7 +63,7 @@ export const Picture = styled.img`
     cursor: pointer;
     width: 100%;
     border: 3px solid transparent;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: auto;
     `;
 
