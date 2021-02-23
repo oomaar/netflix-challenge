@@ -9,3 +9,4 @@ export { default as SignupForm } from "./SignupForm/SignupForm";
 export { default as BrowseContainer } from "./BrowseContainer/BrowseContainer";
 export { default as Profiles } from "./Profiles/Profiles";
 export { default as Loading } from "./Loading/Loading";
+export { default as Navbar } from "./Navbar/Navbar";

@@ -27,6 +27,16 @@ export const Background = styled.div`
         rgba(0, 0, 0, 0.35)),
         url("/images/misc/home-bg.jpg") center center / cover no-repeat;
     }
+
+    &.browseContainer__background {
+        background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.8)),
+        url("/images/misc/paranormal.jpg") center center / cover no-repeat;
+        border: 0;
+    }
 `;
 
 export const Netflix = styled.img`

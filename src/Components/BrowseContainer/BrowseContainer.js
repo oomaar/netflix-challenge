@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-// import styled from "styled-components/macro";
-import { Loading, Profiles } from '..';
+import styled from "styled-components/macro";
+import { Loading, Profiles, Navbar } from '..';
 import { auth } from '../../lib/firebase';
+import { Background } from '../Header/styles/styledHeader';
 
 const BrowseContainer = () => {
     const [profile, setProfile] = useState({});
@@ -14,9 +15,15 @@ const BrowseContainer = () => {
     }, [profile, profile.displayName]);
 
     return profile.displayName ? (
-        loading ? (
-            <Loading src={user.photoURL} />
-        ) : <Loading.ReleaseBody />
+        <ScreenContainer>
+            {loading ? (
+                <Loading src={user.photoURL} />
+            ) : <Loading.ReleaseBody />}
+
+            <Background className="browseContainer__background">
+                <Navbar />
+            </Background>
+        </ScreenContainer>
     ) : (
             <Profiles user={user} setProfile={setProfile} />
         )
@@ -24,4 +31,7 @@ const BrowseContainer = () => {
 
 export default BrowseContainer;
 
-// const ScreenContainer = styled.div``;
+const ScreenContainer = styled.div`
+    background: #121212;
+    height: 100vh;
+`;
