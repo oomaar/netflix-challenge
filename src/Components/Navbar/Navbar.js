@@ -100,7 +100,7 @@ const Navbar = () => {
                         <DropLinks>
                             <DropLink>Account</DropLink>
                             <DropLink>Help Center</DropLink>
-                            <DropLink>Signout of Netflix</DropLink>
+                            <DropLink onClick={() => auth.signOut()}>Signout of Netflix</DropLink>
                         </DropLinks>
                     </DropDown>
                 </UserProfileContainer>

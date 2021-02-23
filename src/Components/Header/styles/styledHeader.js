@@ -12,7 +12,7 @@ export const Background = styled.div`
     rgba(0, 0, 0, 0.35),
     rgba(0, 0, 0, 0.8)),
     url("/images/misc/home-bg.jpg") center center / cover no-repeat;
-    height: 77vh;
+    height: 746.13px;
     width: 100%;
     border-bottom: 8px solid #222;
     z-index: 1;
