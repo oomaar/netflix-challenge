@@ -57,7 +57,7 @@ export const User = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
+    `;
 
 export const Picture = styled.img`
     cursor: pointer;
@@ -65,9 +65,10 @@ export const Picture = styled.img`
     border: 3px solid transparent;
     border-radius: 5px;
     margin: auto;
-`;
+    `;
 
 export const DisplayName = styled.h3`
+    cursor: pointer;
     color: #808080;
     text-align: center;
 `;
