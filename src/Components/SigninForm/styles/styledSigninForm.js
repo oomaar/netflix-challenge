@@ -12,6 +12,7 @@ export const Container = styled.div`
         right: 0;
         margin: auto;
         background-color: rgba(0, 0, 0, 0.65);
+        z-index: 1;
 
         @media (max-width: 600px) {
             top: 50px;

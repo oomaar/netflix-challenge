@@ -57,7 +57,7 @@ const SignupForm = () => {
             className="signin__form"
             method="POST"
             >
-                <Title>Sign up</Title>
+                <Title>Sign Up</Title>
                 {error && <Error>{error}</Error>}
                 <InputContainer className="signin__inputContainer">
                     <Input

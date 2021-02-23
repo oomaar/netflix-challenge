@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link as ReactRouterLink } from "react-router-dom";
+import * as ROUTES from "../constants/routes";
 import styled from "styled-components/macro";
 import logo from "../logo.svg";
 import {
@@ -20,7 +22,9 @@ const SignupScreen = () => {
         <ScreenContainer>
             <HeaderContainer>
                 <Background className="signin__background">
-                    <Netflix src={logo} alt="Netflix" />
+                    <ReactRouterLink to={ROUTES.HOME}>
+                        <Netflix src={logo} alt="Netflix" />
+                    </ReactRouterLink>
                     <SignupForm />
                 </Background>
             </HeaderContainer>

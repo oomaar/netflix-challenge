@@ -13,6 +13,7 @@ export const Container = styled.div`
         bottom: 0;
         left: 0;
         right: 0;
+        z-index: 0;
 
         @media (max-width: 600px) {
             height: 22%;
