@@ -1,8 +1,17 @@
 import { useState, useEffect } from 'react';
-import styled from "styled-components/macro";
 import { Loading, Profiles, Navbar } from '..';
 import { auth } from '../../lib/firebase';
 import { Background } from '../Header/styles/styledHeader';
+import {
+    Container,
+    Banner,
+    MovieTitle,
+    MovieInfo,
+    Buttons,
+    PlayButton,
+    ButtonIcon,
+    InfoButton,
+} from "./styles/styledBrowseContainer";
 
 const BrowseContainer = () => {
     const [profile, setProfile] = useState({});
@@ -15,23 +24,37 @@ const BrowseContainer = () => {
     }, [profile, profile.displayName]);
 
     return profile.displayName ? (
-        <ScreenContainer>
+        <Container>
             {loading ? (
                 <Loading src={user.photoURL} />
             ) : <Loading.ReleaseBody />}
 
             <Background className="browseContainer__background">
                 <Navbar />
+
+                <Banner>
+                    <MovieTitle>Watch Paranormal Now</MovieTitle>
+                    <MovieInfo>
+                        After a skeptical hematologist is plunged into a series of inexplicable events,
+                        he unwillingly becomes the go-to-guy for paranormal investigations.
+                    </MovieInfo>
+                    <Buttons>
+                        <PlayButton>
+                            <ButtonIcon src="/images/icons/play.png" alt="Play Button" />
+                        Play
+                    </PlayButton>
+                        <InfoButton>
+                            <ButtonIcon src="/images/icons/info.png" alt="info Button" />
+                        More info
+                    </InfoButton>
+                    </Buttons>
+                </Banner>
+
             </Background>
-        </ScreenContainer>
+        </Container>
     ) : (
             <Profiles user={user} setProfile={setProfile} />
         )
 };
 
 export default BrowseContainer;
-
-const ScreenContainer = styled.div`
-    background: #121212;
-    height: 100vh;
-`;

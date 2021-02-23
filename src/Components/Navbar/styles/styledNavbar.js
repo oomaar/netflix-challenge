@@ -45,7 +45,7 @@ export const ResponsiveContainer = styled.div`
 export const BurgerIcons = styled.div`
     cursor: pointer;
     display: none;
-    margin-left: 30px;
+    margin-left: 10px;
     align-items: center;
 
     @media (max-width: 1300px) {
@@ -55,13 +55,13 @@ export const BurgerIcons = styled.div`
 
 export const BurgerIcon = styled.img`
     filter: invert(1);
-    width: 40px;
+    width: 30px;
     margin-right: 10px;
 `;
 
 export const BurgerContainer  = styled.div`
     border-top: 1px solid white;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     left: 0;
@@ -69,6 +69,10 @@ export const BurgerContainer  = styled.div`
     width: 200px;
     background: none;
     margin: 10px auto 0;
+
+    @media (max-width: 1300px) {
+        display: flex;
+    }
 `;
 
 export const Link = styled.button`
@@ -204,5 +208,6 @@ export const SearchInput = styled.input`
     color: #808080;
     padding: 8px;
     background: rgba(0, 0, 0, 0.7);
+    display: none;
     /*background: rgba(64, 64, 64, 0.5); */
 `;
