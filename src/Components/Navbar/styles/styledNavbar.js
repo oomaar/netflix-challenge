@@ -197,7 +197,7 @@ export const GroupContainer = styled.div`
 
 export const Icon = styled.img`
     filter: invert(1);
-    width: 30px;
+    width: 25px;
     margin: 0 5px;
     cursor: pointer;
 `;
@@ -207,7 +207,20 @@ export const SearchInput = styled.input`
     outline: none;
     color: #808080;
     padding: 8px;
+    height: 30px;
     background: rgba(0, 0, 0, 0.7);
-    display: none;
-    /*background: rgba(64, 64, 64, 0.5); */
+    transition: width 0.5s;
+    margin-left: ${({ active }) => (active === true ? '10px' : '0')};
+    padding: ${({ active }) => (active === true ? '0 10px' : '0')};
+    opacity: ${({ active }) => (active === true ? '1' : '0')};
+    width: ${({ active }) => (active === true ? '200px' : '0px')};
+    /* Bracket Hell */
+`;
+
+export const SearchIcon = styled.button`
+    background: none;
+    outline: none;
+    border: none;
+    width: 30px;
+    margin: 0 5px;
 `;

@@ -16,6 +16,7 @@ import {
 const BrowseContainer = () => {
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('');
     const user = auth.currentUser || {};
 
     useEffect(() => {
@@ -30,7 +31,10 @@ const BrowseContainer = () => {
             ) : <Loading.ReleaseBody />}
 
             <Background className="browseContainer__background">
-                <Navbar />
+                <Navbar
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                />
 
                 <Banner>
                     <MovieTitle>Watch Paranormal Now</MovieTitle>

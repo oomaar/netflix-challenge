@@ -24,11 +24,13 @@ import {
     DropLinks,
     DropLink,
     UserContainer,
-    SearchInput
+    SearchInput,
+    SearchIcon
 } from "./styles/styledNavbar";
 
-const Navbar = () => {
+const Navbar = ({ searchTerm, setSearchTerm }) => {
     const [show, setShow] = useState(false);
+    const [active, setActive] = useState(false);
     const [responsive, setResponsive] = useState(false);
     const user = auth.currentUser || {};
 
@@ -59,7 +61,7 @@ const Navbar = () => {
                         <BurgerIcon src="/images/icons/burger.png" alt="Responsive" />
                         <ChevronDown src="/images/icons/chevron-right.png" alt="Chevron Down" />
                     </BurgerIcons>
-                    
+
                     {responsive && (
                         <BurgerContainer>
                             <LinkHold>
@@ -104,13 +106,21 @@ const Navbar = () => {
                         </DropLinks>
                     </DropDown>
                 </UserProfileContainer>
-                
+
                 <GroupContainer>
                     <Icon src="/images/icons/notifications.png" alt="Notfications" />
                     <Icon src="/images/icons/redeem.png" alt="Gift" />
                     <Link>KIDS</Link>
-                    <Icon src="/images/icons/search.png" alt="Search" />
-                    <SearchInput type="text" placeholder="Titles,people,genres" />
+                    <SearchInput
+                        type="text"
+                        placeholder="Titles,people,genres"
+                        value={searchTerm}
+                        onChange={({ target }) => setSearchTerm(target.value)}
+                        active={active}
+                    />
+                    <SearchIcon onClick={() => setActive(state => !state)}>
+                        <Icon src="/images/icons/search.png" alt="Search" />
+                    </SearchIcon>
                 </GroupContainer>
             </SubContainer>
         </Container>
