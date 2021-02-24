@@ -18,7 +18,7 @@ export default function useContent (target) {
         })
         .catch(err => console.log(err.message));
 
-    }, []);
+    }, [target]);
 
     return { [target]: content };
 }

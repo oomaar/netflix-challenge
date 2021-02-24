@@ -8,7 +8,6 @@ const BrowseScreen = () => {
     const { series } = useContent('series');
     const { films } = useContent('films');
     const slides = selectionFilter(series, films);
-    // console.log("🚀 ~ file: BrowseScreen.js ~ line 9 ~ BrowseScreen ~ slides", slides)
     
     return (
         <ScreenContainer>
