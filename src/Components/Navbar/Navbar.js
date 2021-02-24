@@ -24,11 +24,12 @@ import {
     DropLinks,
     DropLink,
     UserContainer,
+    SearchContainer,
     SearchInput,
     SearchIcon
 } from "./styles/styledNavbar";
 
-const Navbar = ({ searchTerm, setSearchTerm }) => {
+const Navbar = ({ searchTerm, setSearchTerm, category, setCategory }) => {
     const [show, setShow] = useState(false);
     const [active, setActive] = useState(false);
     const [responsive, setResponsive] = useState(false);
@@ -50,37 +51,51 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
 
                 <LinksContainer>
                     <Link>Home</Link>
-                    <Link>TV Shows</Link>
-                    <Link>Movies</Link>
+                    <Link
+                        activate={category === 'series' ? 'true' : 'false'}
+                        onClick={() => setCategory('series')}
+                    >
+                        TV Shows
+                    </Link>
+                    <Link
+                        activate={category === 'films' ? 'true' : 'false'}
+                        onClick={() => setCategory('films')}
+                    >
+                        Movies
+                    </Link>
                     <Link>New & Popular</Link>
                     <Link>My List</Link>
                 </LinksContainer>
-
+                
                 <ResponsiveContainer>
                     <BurgerIcons onClick={() => setResponsive(state => !state)}>
                         <BurgerIcon src="/images/icons/burger.png" alt="Responsive" />
                         <ChevronDown src="/images/icons/chevron-right.png" alt="Chevron Down" />
                     </BurgerIcons>
-
-                    {responsive && (
-                        <BurgerContainer>
-                            <LinkHold>
-                                <ResponsiveLink>Home</ResponsiveLink>
-                            </LinkHold>
-                            <LinkHold>
-                                <ResponsiveLink>TV Shows</ResponsiveLink>
-                            </LinkHold>
-                            <LinkHold>
-                                <ResponsiveLink>Movies</ResponsiveLink>
-                            </LinkHold>
-                            <LinkHold>
-                                <ResponsiveLink>New & Popular</ResponsiveLink>
-                            </LinkHold>
-                            <LinkHold>
-                                <ResponsiveLink>My List</ResponsiveLink>
-                            </LinkHold>
-                        </BurgerContainer>
-                    )}
+                    {responsive &&
+                        (
+                            <BurgerContainer>
+                                <LinkHold>
+                                    <ResponsiveLink>Home</ResponsiveLink>
+                                </LinkHold>
+                                <LinkHold>
+                                    <ResponsiveLink>
+                                        TV Shows
+                                    </ResponsiveLink>
+                                </LinkHold>
+                                <LinkHold>
+                                    <ResponsiveLink>
+                                        Movies
+                                    </ResponsiveLink>
+                                </LinkHold>
+                                <LinkHold>
+                                    <ResponsiveLink>New & Popular</ResponsiveLink>
+                                </LinkHold>
+                                <LinkHold>
+                                    <ResponsiveLink>My List</ResponsiveLink>
+                                </LinkHold>
+                            </BurgerContainer>
+                        )}
                 </ResponsiveContainer>
             </SubContainer>
 
@@ -111,16 +126,18 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
                     <Icon src="/images/icons/notifications.png" alt="Notfications" />
                     <Icon src="/images/icons/redeem.png" alt="Gift" />
                     <Link>KIDS</Link>
-                    <SearchInput
-                        type="text"
-                        placeholder="Titles,people,genres"
-                        value={searchTerm}
-                        onChange={({ target }) => setSearchTerm(target.value)}
-                        active={active}
-                    />
-                    <SearchIcon onClick={() => setActive(state => !state)}>
-                        <Icon src="/images/icons/search.png" alt="Search" />
-                    </SearchIcon>
+                    <SearchContainer>
+                        <SearchInput
+                            type="text"
+                            placeholder="Titles,people,genres"
+                            value={searchTerm}
+                            onChange={({ target }) => setSearchTerm(target.value)}
+                            active={active}
+                        />
+                        <SearchIcon onClick={() => setActive(state => !state)}>
+                            <Icon src="/images/icons/search.png" alt="Search" />
+                        </SearchIcon>
+                    </SearchContainer>
                 </GroupContainer>
             </SubContainer>
         </Container>

@@ -83,7 +83,7 @@ export const Link = styled.button`
     outline: none;
     border: none;
     cursor: pointer;
-    font-weight: 450;
+    font-weight: ${({ activate }) => (activate === 'true' ? '700' : 'normal')};
 `;
 
 export const LinkHold = styled.div`
@@ -198,8 +198,15 @@ export const GroupContainer = styled.div`
 export const Icon = styled.img`
     filter: invert(1);
     width: 25px;
-    margin: 0 5px;
+    margin: 0 2px;
     cursor: pointer;
+`;
+
+export const SearchContainer = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    z-index: 1;
 `;
 
 export const SearchInput = styled.input`

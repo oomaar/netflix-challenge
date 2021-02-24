@@ -9,7 +9,6 @@ import {
     ProfilesButton,
     User,
     UserPicture,
-    UserDisplayName,
     Picture,
     DisplayName,
 } from "./styles/styledProfiles";
