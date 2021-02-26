@@ -29,6 +29,10 @@ export const Rows = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+
+    &.rows__browsePage {
+        margin: 0 0 20px 0;
+    }
 `;
 
 export const Row = styled.div`

@@ -1,8 +1,8 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
+    height: 100%;
     background: #121212;
-    height: 100vh;
 `;
 
 export const Banner = styled.div`
@@ -98,5 +98,50 @@ export const InfoButton = styled.div`
 
     @media (max-width: 700px) {
         height: 45px;
+    }
+`;
+
+export const BrowseFooter = styled.div`
+    margin-top: 50px;
+    padding: 20px;
+`;
+
+export const FooterContainer = styled.div`
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+`;
+
+export const SocialBox = styled.div`
+    display: flex;
+
+    img {
+        filter: invert(1);
+        width: 30px;
+        cursor: pointer;
+        margin: 10px;
+    }
+`;
+
+export const FooterLink = styled.p`
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+`;
+
+export const ServiceButton = styled.button`
+    outline: 0;
+    border: 2px solid #808080;
+    color: #808080;
+    padding: 7px;
+    font-size: 13px;
+    cursor: pointer;
+    background: transparent;
+
+    &:hover {
+        color: #fff;
     }
 `;
