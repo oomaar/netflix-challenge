@@ -7,6 +7,7 @@ export const Container = styled.div`
     background-color: transparent;
     display: flex;
     transition: 0.5s ease;
+    z-index: 1;
 
     &.blackNav {
         background-color: #000;
