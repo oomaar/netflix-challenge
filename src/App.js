@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { HomeScreen, SigninScreen, SignupScreen, BrowseScreen } from './Screens';
 import { IsUserRedirect, ProtectedRoute } from "./helpers/routes";
@@ -9,7 +10,6 @@ function App() {
   // const user = null;
   // const user = { name: 'username' };
   const { user } = useAuthListener();
-  // console.log("🚀 ~ file: App.js ~ line 13 ~ App ~ user", user);
 
   return (
     <Router>
