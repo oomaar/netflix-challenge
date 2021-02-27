@@ -70,10 +70,16 @@ const BrowseContainer = ({ slides }) => {
                         he unwillingly becomes the go-to-guy for paranormal investigations.
                     </MovieInfo>
                     <Buttons>
-                        <PlayButton>
-                            <ButtonIcon src="/images/icons/play.png" alt="Play Button" />
-                        Play
-                    </PlayButton>
+
+                        <Player>
+                            <PlayButton>
+                                <ButtonIcon src="/images/icons/play.png" alt="Play Button" />
+                                Play
+                            </PlayButton>
+                            {/* <Player.Button /> */}
+                            <Player.Video src="/videos/Paranormal.mp4" />
+                        </Player>
+
                         <InfoButton>
                             <ButtonIcon src="/images/icons/info.png" alt="info Button" />
                         More info

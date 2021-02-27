@@ -1,3 +1,20 @@
+This Project (Netflix Clone) was built using ReactJS (useContext, useState, useEffect) 
+Custom hooks, custom util, fuse.js
+Firebase (auth, firestore),
+Styled using styled-components.
+
+- There are 4 pages in this application (Landing-Page, Sign-in, Sign-up and browse)
+- Full user authentication (firebase auth)
+
+- things I Learned =>
+1- Responsive Accordion
+2- Creating an authListner
+3- Creating Protected Routes
+
+--:Tip of the project:-
+Nothing is easy and never give up
+--:Tip of the project:-
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
