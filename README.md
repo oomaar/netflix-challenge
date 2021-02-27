@@ -13,7 +13,12 @@ Styled using styled-components.
 
 --:Tip of the project:-
 Nothing is easy and never give up
---:Tip of the project:-
+
+<img src="/public/images/screens/home.jpg" width="600px" >
+<img src="/public/images/screens/signin.jpg" width="600px" >
+<img src="/public/images/screens/whos.jpg" width="600px" >
+<img src="/public/images/screens/browse.jpg" width="600px" >
+<img src="/public/images/screens/play.jpg" width="600px" >
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
