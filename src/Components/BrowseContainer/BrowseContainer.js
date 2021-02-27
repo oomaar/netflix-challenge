@@ -24,11 +24,11 @@ const BrowseContainer = ({ slides }) => {
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
-    const user = auth.currentUser || {};
-
     const [category, setCategory] = useState('series');
     const [slideRows, setSlideRows] = useState([]);
 
+    const user = auth.currentUser || {};
+    
     useEffect(() => {
         // console.log("🚀 ~ file: BrowseContainer.js ~ line 7 ~ BrowseContainer ~ profile", profile)
         setTimeout(() => setLoading(false), 3000);

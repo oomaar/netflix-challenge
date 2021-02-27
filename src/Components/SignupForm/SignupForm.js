@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import { auth } from '../../lib/firebase';
@@ -49,7 +49,6 @@ const SignupForm = () => {
         .catch(err => setError(err.message));
     }
     
-
     return (
         <Container>
             <Signinform 

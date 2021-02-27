@@ -14,10 +14,6 @@ import {
 } from "./styles/styledProfiles";
 
 const Profiles = ({ user, setProfile }) => {
-    // console.log("🚀 ~ file: Profiles.js ~ line 16 ~ Profiles ~ user", user.photoURL);
-    // const src = user.photoURL;
-
-
     return (
         <Container>
             <FrontEnd />

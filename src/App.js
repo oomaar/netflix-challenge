@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { HomeScreen, SigninScreen, SignupScreen, BrowseScreen } from './Screens';
 import { IsUserRedirect, ProtectedRoute } from "./helpers/routes";

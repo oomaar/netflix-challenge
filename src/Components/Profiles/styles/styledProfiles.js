@@ -77,6 +77,7 @@ export const UserPicture = styled.div`
     padding: 10px;
     width: 200px;
     margin: 10px;
+    transition: 1s;
     
     &:hover > ${Picture} {
         border: 3px solid #fff;

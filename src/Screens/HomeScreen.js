@@ -1,4 +1,3 @@
-import React from 'react';
 import { Accordion, Footer, Header, Storycard } from '../Components';
 
 const HomeScreen = () => {

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import { auth } from '../../lib/firebase';
@@ -35,7 +35,6 @@ const SigninForm = () => {
             passwordRef.current.value
         )
         .then(authUser => {
-            // console.log("🚀 User", authUser);
             history.push(ROUTES.BROWSE);
         })
             .catch(err => setError(err.message));
