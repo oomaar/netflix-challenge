@@ -102,7 +102,7 @@ const Navbar = ({ searchTerm, setSearchTerm, category, setCategory }) => {
             <SubContainer className="invertSubContainer">
                 <UserProfileContainer>
                     <UserProfile src={`/images/users/${user.photoURL}.png`} alt="Profile Picture" />
-                    <ChevronDown src="/images/icons/chevron-right.png" alt="Chevron Down" />
+                    <ChevronDown src="/images/icons/play.png" alt="Chevron Down" />
                     <DropDown>
                         <DropLinks className="above">
                             <UsersContainer>

@@ -117,9 +117,9 @@ export const DropDown = styled.div`
     position: absolute;
     top: 45px;
     right: 30px;
-    /* display: flex; */
     flex-direction: column;
     display: none;
+    transition: display 1s ease;
 `;
 
 export const UserProfileContainer = styled.div`
@@ -180,13 +180,13 @@ export const DropLink = styled.button`
 export const UserProfile = styled.img`
     width: 35px;
     border-radius: 5px;
-    margin-right: 15px;
+    margin-right: 10px;
 `;
 
 export const ChevronDown = styled.img`
     transform: rotate(90deg);
     filter: invert(1);
-    width: 20px;
+    width: 15px;
 `;
 
 export const GroupContainer = styled.div`

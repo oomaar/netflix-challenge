@@ -65,7 +65,7 @@ export const PlayButton = styled.button`
     &:hover > ${ButtonIcon} {
         filter: invert(1);
     }
-    
+
     @media (max-width: 700px) {
         height: 45px;
     }
@@ -126,6 +126,7 @@ export const SocialBox = styled.div`
 export const FooterLink = styled.p`
     cursor: pointer;
     font-size: 14px;
+    color: #808080;
 
     &:hover {
         text-decoration: underline;
