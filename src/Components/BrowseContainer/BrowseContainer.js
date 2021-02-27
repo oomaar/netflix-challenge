@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Loading, Profiles, Navbar, Card, Player } from '..';
+import Fuse from 'fuse.js';
 import { auth } from '../../lib/firebase';
 import { Row, Rows } from '../Footer/styles/styledFooter';
 import { Background } from '../Header/styles/styledHeader';
@@ -28,7 +29,7 @@ const BrowseContainer = ({ slides }) => {
     const [slideRows, setSlideRows] = useState([]);
 
     const user = auth.currentUser || {};
-    
+
     useEffect(() => {
         // console.log("🚀 ~ file: BrowseContainer.js ~ line 7 ~ BrowseContainer ~ profile", profile)
         setTimeout(() => setLoading(false), 3000);
@@ -38,11 +39,22 @@ const BrowseContainer = ({ slides }) => {
         setSlideRows(slides[category]);
     }, [slides, category]);
 
+    useEffect(() => {
+        const fuse = new Fuse(slideRows, { keys: ['data.description', 'data.title', 'data.genre'] });
+        const results = fuse.search(searchTerm).map(({ item }) => item);
+
+        if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+            setSlideRows(results);
+        } else {
+            setSlideRows(slides[category]);
+        }
+    }, [searchTerm]);
+
     return profile.displayName ? (
         <Container>
             {loading ? (
                 <Loading src={user.photoURL} />
-                ) : <Loading.ReleaseBody />}
+            ) : <Loading.ReleaseBody />}
             <Background className="browseContainer__background">
                 <Navbar
                     searchTerm={searchTerm}
@@ -129,8 +141,8 @@ const BrowseContainer = ({ slides }) => {
                         </Row>
                     </Rows>
 
-                        <ServiceButton>Service Code</ServiceButton>
-                        <h6>Copy Rights</h6>
+                    <ServiceButton>Service Code</ServiceButton>
+                    <h6>Copy Rights</h6>
 
                 </FooterContainer>
             </BrowseFooter>
