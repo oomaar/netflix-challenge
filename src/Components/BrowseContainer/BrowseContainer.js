@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Loading, Profiles, Navbar, Card } from '..';
+import { Loading, Profiles, Navbar, Card, Player } from '..';
 import { auth } from '../../lib/firebase';
 import { Row, Rows } from '../Footer/styles/styledFooter';
 import { Background } from '../Header/styles/styledHeader';
@@ -87,18 +87,16 @@ const BrowseContainer = ({ slides }) => {
                             ))}
                         </Card.Entities>
                         <Card.Feature category={category}>
-                            {/* <Player>
+                            <Player>
                                 <Player.Button />
-                                <Player.Video src="/videos/bunny.mp4" />
-                            </Player> */}
-                            <p>Hello !</p>
+                                <Player.Video src="/videos/Paranormal.mp4" />
+                            </Player>
                         </Card.Feature>
                     </Card>
                 ))}
 
             </Card.Group>
 
-            {/* <h1>Footer</h1> */}
             <BrowseFooter>
                 <FooterContainer>
                     <SocialBox>
