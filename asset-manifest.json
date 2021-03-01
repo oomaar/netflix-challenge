@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/netflix-challenge/static/js/main.1c63767c.chunk.js",
+    "main.js.map": "/netflix-challenge/static/js/main.1c63767c.chunk.js.map",
+    "runtime-main.js": "/netflix-challenge/static/js/runtime-main.a0dcc7d5.js",
+    "runtime-main.js.map": "/netflix-challenge/static/js/runtime-main.a0dcc7d5.js.map",
+    "static/js/2.8f741759.chunk.js": "/netflix-challenge/static/js/2.8f741759.chunk.js",
+    "static/js/2.8f741759.chunk.js.map": "/netflix-challenge/static/js/2.8f741759.chunk.js.map",
+    "index.html": "/netflix-challenge/index.html",
+    "static/js/2.8f741759.chunk.js.LICENSE.txt": "/netflix-challenge/static/js/2.8f741759.chunk.js.LICENSE.txt",
+    "static/media/logo.5787551b.svg": "/netflix-challenge/static/media/logo.5787551b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a0dcc7d5.js",
+    "static/js/2.8f741759.chunk.js",
+    "static/js/main.1c63767c.chunk.js"
+  ]
+}
