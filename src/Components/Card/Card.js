@@ -31,6 +31,8 @@ export default function Card({ children, ...restProps }) {
     );
 }
 
+// TODO: Fix Responsive Issues
+
 Card.Group = function CardGroup({ children, ...restProps }) {
     return <Group {...restProps}>{children}</Group>;
 };
